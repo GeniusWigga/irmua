@@ -1,5 +1,4 @@
 import React, {Component} from 'react'
-import {mySwiper} from "./../scripts/swiper";
 import "swiper/dist/css/swiper.min.css";
 import "./index.css"
 import slide1 from "./../../static/img/foto1.jpg";
@@ -9,7 +8,10 @@ import slide3 from "./../../static/img/foto3.jpg";
 export default class Home extends Component {
 
   componentDidMount() {
-    mySwiper()
+    if (typeof window !== 'undefined' && typeof document !== 'undefined') {
+      const swiper = require("./../scripts/swiper");
+      swiper.mySwiper()
+    }
   }
 
   render() {

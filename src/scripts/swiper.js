@@ -1,4 +1,5 @@
-import Swiper from "swiper";
+
+const Swiper = require("swiper");
 
 export const mySwiper = () => new Swiper('.swiper-container', {
   // Optional parameters
