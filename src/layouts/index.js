@@ -1,64 +1,73 @@
-import React from 'react'
+import React, {Component} from 'react'
 import PropTypes from 'prop-types'
-import Link from 'gatsby-link'
 import Helmet from 'react-helmet'
+import Header from './../components/header/header';
 
+import './../../static/font-awesome-4.7.0/css/font-awesome.css'
 import './index.css'
 
-const Header = () => (
-  <div
-    style={{
-      background: 'rebeccapurple',
-      marginBottom: '1.45rem',
-    }}
-  >
-    <div
-      style={{
-        margin: '0 auto',
-        maxWidth: 960,
-        padding: '1.45rem 1.0875rem',
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: 'white',
-            textDecoration: 'none',
-          }}
-        >
-          Gatsby
-        </Link>
-      </h1>
-    </div>
-  </div>
-)
+export default class Layout extends Component {
 
-const TemplateWrapper = ({ children }) => (
-  <div>
-    <Helmet
-      title="Gatsby Default Starter"
-      meta={[
-        { name: 'description', content: 'Sample' },
-        { name: 'keywords', content: 'sample, something' },
-      ]}
-    />
-    <Header />
-    <div
-      style={{
-        margin: '0 auto',
-        maxWidth: 960,
-        padding: '0px 1.0875rem 1.45rem',
-        paddingTop: 0,
-      }}
-    >
-      {children()}
-    </div>
-  </div>
-)
+  static propTypes = {
+    children: PropTypes.func
+  };
 
-TemplateWrapper.propTypes = {
-  children: PropTypes.func,
-}
+  links = [
+    {
+      name: "Home",
+      to: "/"
+    },
+    {
+      name: "Portfolio",
+      to: "/portfolio"
+    },
+    {
+      name: "Kontakt",
+      to: "/contact"
+    },
+    {
+      name: "Zu meiner Person",
+      to: "/about-me"
+    },
+  ];
 
-export default TemplateWrapper
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      isMobileSubmenuOpen: false
+    }
+  }
+
+  toggleMobileSubmenu = () => {
+    this.setState({
+      isMobileSubmenuOpen: !this.state.isMobileSubmenuOpen
+    })
+  };
+
+  render() {
+    const {children, history} = this.props;
+    const {isMobileSubmenuOpen} = this.state;
+
+    console.log("props: ", this.props);
+
+    const activeSubmenuClass = isMobileSubmenuOpen ? "active" : "";
+
+    return (
+      <div>
+        <Helmet
+          title="Hair and Make up Artist Ina Rudi"
+        />
+        <Header
+          pathname={history.location.pathname}
+          links={this.links}
+          activeSubmenuClass={activeSubmenuClass}
+          toggleSubMenu={this.toggleMobileSubmenu}
+        />
+        <div>
+          {children()}
+        </div>
+      </div>
+  );
+  }
+  }

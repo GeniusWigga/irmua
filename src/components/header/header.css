@@ -1,0 +1,102 @@
+.header {
+  position: static;
+  border-bottom: 1px solid #F2F2F2;
+  height: 77px;
+  line-height: 77px;
+}
+
+.logo, #menu {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.logo {
+  width: 20%;
+  display: inline-block;
+  padding: 0 1em;
+  box-sizing: border-box;
+}
+
+.logo img {
+  margin: 0;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.burger {
+  display: none;
+}
+
+#menu {
+  width: 80%;
+  overflow: hidden;
+}
+
+#menu .menu_container {
+  position: relative;
+  float: right;
+  overflow: hidden;
+  display: inline-block;
+  margin: 0;
+}
+
+#menu .menu_container li {
+  margin: 0;
+  display: block;
+  float: left;
+}
+
+#menu .menu_container li a {
+  padding: 0 2em;
+  box-sizing: border-box;
+  text-decoration: none;
+  display: block;
+  color: #969696;
+}
+
+#menu .menu_container li a:hover,
+#menu .menu_container li.active a {
+  color: #666666;
+  background: #FFFCF7;
+}
+
+@media (max-width: 850px) {
+  .burger {
+    display: inline-block;
+    float: right;
+    padding: 0 1em;
+    box-sizing: border-box;
+    cursor: pointer;
+  }
+
+  .burger i {
+    color: #969696;
+  }
+
+  .logo {
+    min-width: 250px;
+  }
+
+  #menu {
+    display: none;
+  }
+
+  .header.active {
+    height: auto;
+  }
+
+  .header.active #menu {
+    display: inline-block;
+    width: 100%;
+    left: 0;
+    background: white;
+  }
+
+  .header.active #menu .menu_container {
+    width: 100%;
+  }
+
+  .header.active #menu .menu_container li {
+    float: none;
+  }
+}

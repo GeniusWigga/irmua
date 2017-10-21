@@ -17,9 +17,10 @@
   "license": "MIT",
   "main": "n/a",
   "scripts": {
-    "build": "npm run check && gatsby build",
+    "build": "npm run check && npm run clean && gatsby build",
+    "clean": "rm -rf public",
     "check": "node checkVersion.js",
-    "develop": "npm run check && gatsby develop",
+    "develop": "npm run check && npm run clean && gatsby develop",
     "format": "npm run check && prettier --trailing-comma es5 --no-semi --single-quote --write 'src/**/*.js'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
