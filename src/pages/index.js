@@ -1,13 +1,29 @@
-import React from 'react'
-import Link from 'gatsby-link'
+import React, {Component} from 'react'
+import {mySwiper} from "./../scripts/swiper";
+import "swiper/dist/css/swiper.min.css";
+import "./index.css"
+import slide1 from "./../../static/img/foto1.jpg";
+import slide2 from "./../../static/img/foto2.jpg";
+import slide3 from "./../../static/img/foto3.jpg";
 
-const IndexPage = () => (
-  <div>
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <Link to="/page-2/">Go to page 2</Link>
-  </div>
-)
+export default class Home extends Component {
 
-export default IndexPage
+  componentDidMount() {
+    mySwiper()
+  }
+
+  render() {
+    return (
+      <div className="home">
+        <div className="swiper-container">
+          <div className="swiper-wrapper">
+            <div className="swiper-slide"><img src={slide1} alt="Ina Rudi Portfolio Image" /></div>
+            <div className="swiper-slide"><img src={slide2} alt="Ina Rudi Portfolio Image" /></div>
+            <div className="swiper-slide"><img src={slide3} alt="Ina Rudi Portfolio Image" /></div>
+          </div>
+          <div className="swiper-pagination" />
+        </div>
+      </div>
+    )
+  }
+}

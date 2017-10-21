@@ -49,8 +49,6 @@ export default class Layout extends Component {
     const {children, history} = this.props;
     const {isMobileSubmenuOpen} = this.state;
 
-    console.log("props: ", this.props);
-
     const activeSubmenuClass = isMobileSubmenuOpen ? "active" : "";
 
     return (
@@ -64,10 +62,10 @@ export default class Layout extends Component {
           activeSubmenuClass={activeSubmenuClass}
           toggleSubMenu={this.toggleMobileSubmenu}
         />
-        <div>
+        <div className="layout">
           {children()}
         </div>
       </div>
-  );
+    );
   }
-  }
+}

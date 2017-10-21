@@ -56,8 +56,8 @@
 
 #menu .menu_container li a:hover,
 #menu .menu_container li.active a {
-  color: #666666;
-  background: #FFFCF7;
+  color:#F2F2F2;
+  background: #afcdc0;
 }
 
 @media (max-width: 850px) {
