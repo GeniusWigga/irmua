@@ -19,8 +19,8 @@ export default class Layout extends Component {
       to: "/"
     },
     {
-      name: "Portfolio",
-      to: "/portfolio"
+      name: "Leistungen",
+      to: "/services"
     },
     {
       name: "Kontakt",

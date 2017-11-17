@@ -7,7 +7,7 @@ export default class Imprint extends Component {
 
   render() {
     return (
-      <div className="imprint">
+      <div className="site-container imprint">
         <h2>Impressum</h2>
 
         <address>

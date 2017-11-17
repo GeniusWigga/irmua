@@ -43,17 +43,40 @@ p {
   background: #AFCDC0;
 }
 
-.imprint {
+.site-container {
   padding: 5em 0;
   color: #969696;
 }
 
-.imprint h2 {
+.site-container img {
+  margin: 3em 0;
+}
+
+.site-container  h2 {
   color: #727272;
 }
 
-.imprint h4 {
+.site-container h4 {
   margin-top: 2em;
+}
+
+.site-container > div {
+  margin-bottom: 3em;
+}
+
+.site-container > div:last-child {
+  margin-bottom: 0;
+}
+
+.site-container > div ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.site-container > div ul li {
+  margin: 0;
+  line-height: 2;
 }
 
 .imprint address {
