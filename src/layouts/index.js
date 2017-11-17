@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import Header from './../components/header/header';
+import Footer from './../components/footer/footer';
 
 import './../../static/font-awesome-4.7.0/css/font-awesome.css'
 import './index.css'
@@ -65,6 +66,7 @@ export default class Layout extends Component {
         <div className="layout">
           {children()}
         </div>
+        <Footer />
       </div>
     );
   }

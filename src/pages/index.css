@@ -1,3 +1,15 @@
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: #AFCDC0;
+  line-height: 1.3;
+  margin-bottom: 1em;
+}
+
+p {
+  line-height: 1.5;
+}
+
 .home {
   padding: 4em 1em;
 }
@@ -29,4 +41,21 @@
 
 .home .swiper-pagination-bullet-active {
   background: #AFCDC0;
+}
+
+.imprint {
+  padding: 5em 0;
+  color: #969696;
+}
+
+.imprint h2 {
+  color: #727272;
+}
+
+.imprint h4 {
+  margin-top: 2em;
+}
+
+.imprint address {
+  font-style: normal;
 }

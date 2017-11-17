@@ -52,6 +52,8 @@
   text-decoration: none;
   display: block;
   color: #969696;
+  border-bottom: none;
+  line-height: inherit;
 }
 
 #menu .menu_container li a:hover,
