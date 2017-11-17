@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 a {
   display: inline-block;
   text-decoration: none;
@@ -45,6 +49,7 @@ p {
 
 .site-container {
   padding: 5em 0;
+  box-sizing: border-box;
   color: #969696;
 }
 
@@ -52,7 +57,7 @@ p {
   margin: 3em 0;
 }
 
-.site-container  h2 {
+.site-container h2 {
   color: #727272;
 }
 
@@ -77,6 +82,28 @@ p {
 .site-container > div ul li {
   margin: 0;
   line-height: 2;
+}
+
+.site-container.portfolio .grid-item,
+.site-container.portfolio .grid-sizer {
+  width: calc((100% / 3) - 10px);
+}
+
+.site-container.portfolio .grid-item {
+  float: left;
+  margin-bottom: 10px;
+}
+
+.site-container.portfolio .grid-item img {
+  display: block;
+  max-width: 100%;
+  margin: 0;
+}
+
+.site-container.portfolio .grid:after {
+  content: '';
+  display: block;
+  clear: both;
 }
 
 .imprint address {

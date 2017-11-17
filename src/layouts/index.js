@@ -23,8 +23,8 @@ export default class Layout extends Component {
       to: "/services"
     },
     {
-      name: "Kontakt",
-      to: "/contact"
+      name: "Portfolio",
+      to: "/portfolio"
     },
     {
       name: "Zu meiner Person",
