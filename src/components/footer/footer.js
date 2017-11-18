@@ -6,7 +6,7 @@ const Footer = () => {
 
   return (
     <footer className={`footer`}>
-      © Copyright - 2017 Ina Rudi - All rights reserved <Link to="/imprint">Impressum</Link>
+      © Copyright - 2017 Ina Rudi - All rights reserved <Link to="/imprint">Impressum / Kontakt</Link>
     </footer>
   )
 };

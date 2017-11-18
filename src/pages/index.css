@@ -12,6 +12,7 @@ a {
 
 p {
   line-height: 1.5;
+  max-width: 650px;
 }
 
 .home {
@@ -108,4 +109,10 @@ p {
 
 .imprint address {
   font-style: normal;
+}
+
+@media (max-width: 1024px) {
+  .site-container {
+    padding: 3em 1em;
+  }
 }

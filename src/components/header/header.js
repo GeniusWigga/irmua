@@ -6,6 +6,8 @@ import logo from "./../../../static/img/logo.svg";
 
 const Header = ({links, toggleSubMenu, activeSubmenuClass, pathname}) => {
 
+  console.log("pathname: ", pathname);
+
   return (
     <header className={`header ${activeSubmenuClass}`}>
       <div className="logo"><img src={logo}/></div>

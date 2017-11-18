@@ -8,3 +8,9 @@ footer a {
   color: #969696;
   border-bottom: 1px solid #969696;
 }
+
+@media (max-width: 1024px) {
+  footer {
+    padding: 3em 1em;
+  }
+}
