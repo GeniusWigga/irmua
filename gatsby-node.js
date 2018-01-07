@@ -13,15 +13,12 @@ exports.onCreatePage = ({page, boundActionCreators}) => {
 
     if (isPathHome) {
 
-      console.log("homeImages: ", homeImages);
-
       createPage({
         path: `/`,
         component: `${templatePath}/home/home.js`,
         context: homeImages
       });
 
-      // deletePage(oldPage)
     }
     resolve();
   });
