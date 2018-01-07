@@ -11,11 +11,11 @@ collections:
   - label: "Pages"
     name: "pages"
     delete: false
+    editor:
+      preview: false
     files:
       - name: "home"
         label: "Home"
-        editor:
-          preview: false
         file: "src/pages/home.json"
         description: "Gallery Images"
         fields:
