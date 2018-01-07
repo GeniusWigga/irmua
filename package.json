@@ -16,12 +16,15 @@
     "gatsby"
   ],
   "engines": {
-    "node": "8.6.0"
+    "node": "8.9.3"
   },
   "license": "MIT",
   "main": "n/a",
   "scripts": {
-    "build": "npm run check && npm run clean && gatsby build",
+    "build": "npm run check && npm run clean && npm run build:cms && npm run build:site",
+    "build:site": "gatsby build",
+    "build:cms": "cd cms && npm i && npm run build",
+    "serve": "gatsby serve",
     "clean": "rm -rf public",
     "check": "node checkVersion.js",
     "develop": "npm run check && npm run clean && gatsby develop",
