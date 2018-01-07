@@ -1,19 +1,18 @@
+const Swiper = require('swiper')
 
-const Swiper = require("swiper");
+export const mySwiper = () =>
+  new Swiper('.swiper-container', {
+    // Optional parameters
+    direction: 'horizontal',
+    loop: true,
 
-export const mySwiper = () => new Swiper('.swiper-container', {
-  // Optional parameters
-  direction: 'horizontal',
-  loop: true,
+    // If we need pagination
+    pagination: {
+      el: '.swiper-pagination',
+    },
 
-  // If we need pagination
-  pagination: {
-    el: '.swiper-pagination',
-  },
-
-  autoplay: {
-    delay: 2500,
-    disableOnInteraction: false,
-  },
-
-});
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
+  })

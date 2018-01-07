@@ -1,14 +1,14 @@
 import Link from 'gatsby-link'
 import React from 'react'
-import "./footer.css";
+import './footer.css'
 
 const Footer = () => {
-
   return (
     <footer className={`footer`}>
-      © Copyright - 2017 Ina Rudi - All rights reserved <Link to="/imprint">Impressum / Kontakt</Link>
+      © Copyright - 2017 Ina Rudi - All rights reserved{' '}
+      <Link to="/imprint">Impressum / Kontakt</Link>
     </footer>
   )
-};
+}
 
-export default Footer;
+export default Footer
