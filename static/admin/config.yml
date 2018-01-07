@@ -8,26 +8,17 @@ media_folder: static/img
 public_folder: /img
 
 collections:
-  - name: "blog"
-    label: "Blog"
-    folder: "src/pages/blog"
-    create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    format: "json"
-    fields:
-      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "blog-post"}
-      - {label: "Path", name: "path", widget: "string"}
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Description", name: "description", widget: "text"}
-      - {label: "Body", name: "body", widget: "markdown"}
   - label: "Pages"
     name: "pages"
-    delete: "false"
     files:
-      - label: "About Page"
-        name: "about"
-        file: "src/pages/about.json"
+      - name: "home"
+        label: "Home"
+        file: "src/pages/home.json"
+        description: "Gallery Images"
         fields:
-          - {label: Title, name: title, widget: string}
-          - {label: Description, name: description, widget: string}
+          - name: image
+            label: Image
+            widget: list
+            fields:
+              - {label: "Alt", name: "alt", widget: "string"}
+              - {label: "Image", name: "image", widget: "image"}
