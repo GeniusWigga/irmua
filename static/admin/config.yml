@@ -50,3 +50,11 @@ collections:
             fields:
               - {label: "Alt", name: "alt", widget: "string"}
               - {label: "Image", name: "image", widget: "image"}
+      - name: "imprint"
+        label: "Impressum"
+        file: "data/imprint.json"
+        description: "Imprint content"
+        fields:
+          - name: "body"
+            label: "Inhalt"
+            widget: markdown

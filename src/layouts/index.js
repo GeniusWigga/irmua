@@ -12,25 +12,6 @@ export default class Layout extends Component {
     children: PropTypes.func,
   }
 
-  links = [
-    {
-      name: 'Home',
-      to: '/',
-    },
-    {
-      name: 'Leistungen',
-      to: '/services',
-    },
-    {
-      name: 'Portfolio',
-      to: '/portfolio',
-    },
-    {
-      name: 'Zu meiner Person',
-      to: '/about-me',
-    },
-  ]
-
   constructor(props) {
     super(props)
 
@@ -56,7 +37,6 @@ export default class Layout extends Component {
         <Helmet title="Hair and Make up Artist Ina Rudi" />
         <Header
           pathname={history.location.pathname}
-          links={this.links}
           activeSubmenuClass={activeSubmenuClass}
           toggleSubMenu={this.toggleMobileSubmenu}
         />

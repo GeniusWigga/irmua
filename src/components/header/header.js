@@ -4,8 +4,12 @@ import PropTypes from 'prop-types'
 import { isEqual, chain } from 'lodash'
 import './header.css'
 import logo from './../../../static/img/logo.svg'
+import headerData from "./../../../data/header.json";
 
-const Header = ({ links, toggleSubMenu, activeSubmenuClass, pathname }) => {
+const Header = ({ toggleSubMenu, activeSubmenuClass, pathname }) => {
+
+  const links = headerData.navigation_links;
+
   return (
     <header className={`header ${activeSubmenuClass}`}>
       <div className="logo">
@@ -21,7 +25,7 @@ const Header = ({ links, toggleSubMenu, activeSubmenuClass, pathname }) => {
               .split('/')
               .compact()
               .value()
-            const linkTo = chain(link.to)
+            const linkTo = chain(link.link)
               .split('/')
               .compact()
               .value()
@@ -29,8 +33,8 @@ const Header = ({ links, toggleSubMenu, activeSubmenuClass, pathname }) => {
             let isActive = isEqual(path, linkTo)
 
             return (
-              <li className={isActive ? 'active' : null} key={link.to}>
-                <Link to={link.to}>{link.name}</Link>
+              <li className={isActive ? 'active' : null} key={link.link}>
+                <Link to={link.link}>{link.link_name}</Link>
               </li>
             )
           })}
@@ -43,7 +47,6 @@ const Header = ({ links, toggleSubMenu, activeSubmenuClass, pathname }) => {
 Header.propTypes = {
   toggleSubMenu: PropTypes.func.isRequired,
   activeSubmenuClass: PropTypes.string.isRequired,
-  links: PropTypes.array.isRequired,
   pathname: PropTypes.string.isRequired,
 }
 
