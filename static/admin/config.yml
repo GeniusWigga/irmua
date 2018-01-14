@@ -8,6 +8,20 @@ media_folder: static/img
 public_folder: /img
 
 collections:
+  - label: "Settings"
+    name: "settings"
+    delete: false
+    editor:
+      preview: false
+    files:
+      - label: "Footer"
+        name: "footer"
+        file: "data/footer.json"
+        description: "Footer Settings"
+        fields:
+          - name: "footer_text"
+            label: "Footer Text"
+            widget: "string"
   - label: "Pages"
     name: "pages"
     delete: false
@@ -16,7 +30,7 @@ collections:
     files:
       - name: "home"
         label: "Home"
-        file: "src/pages/home.json"
+        file: "data/home.json"
         description: "Gallery Images"
         fields:
           - name: image
