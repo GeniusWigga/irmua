@@ -1,8 +1,9 @@
 const path = require(`path`);
 const _ = require("lodash");
+const rootPath = path.resolve(`./`);
 const srcPath = path.resolve(`./src`);
 const templatePath = `${srcPath}/templates`;
-const homeImages = require(`${srcPath}/pages/home.json`);
+const homeImages = require(`${rootPath}/data/home.json`);
 
 exports.onCreatePage = ({page, boundActionCreators}) => {
   const {createPage} = boundActionCreators;
