@@ -58,3 +58,11 @@ collections:
           - name: "body"
             label: "Inhalt"
             widget: markdown
+      - name: "about_me"
+        label: "Zu meiner person"
+        file: "data/about_me.json"
+        description: "About me content"
+        fields:
+          - name: "body"
+            label: "Inhalt"
+            widget: markdown
