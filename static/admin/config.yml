@@ -22,6 +22,17 @@ collections:
           - name: "footer_text"
             label: "Footer Text"
             widget: "string"
+      - label: "Header"
+        name: "header"
+        file: "data/header.json"
+        description: "Header Settings"
+        fields:
+          - name: "navigation_links"
+            label: "Navigation Links"
+            widget: list
+            fields:
+              - {label: "Link", name: "link", widget: "string"}
+              - {label: "Link Name", name: "link_name", widget: "string"}
   - label: "Pages"
     name: "pages"
     delete: false

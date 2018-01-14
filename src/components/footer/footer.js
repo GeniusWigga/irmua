@@ -1,12 +1,12 @@
-import Link from 'gatsby-link'
 import React from 'react'
+import Markdown from "react-markdown"
 import './footer.css'
+import footerData from "./../../../data/footer.json";
 
 const Footer = () => {
   return (
     <footer className={`footer`}>
-      © Copyright - 2017 Ina Rudi - All rights reserved{' '}
-      <Link to="/imprint">Impressum / Kontakt</Link>
+      <Markdown source={footerData.footer_text}/>
     </footer>
   )
 }
